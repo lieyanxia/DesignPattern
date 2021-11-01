@@ -1,0 +1,65 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Drink <|-- Decorator
+
+Decorator <|-- Chocolate
+Decorator <|-- Milk
+Decorator <|-- Soy
+
+Drink <|-- Coffee
+Coffee <|-- ShortBlack
+Coffee <|-- Decaf
+Coffee <|-- Espresso
+Coffee <|-- LongBlack
+
+abstract class Drink {
+String description
+String getDescription()
+int cost()
+}
+
+class Coffee {
+Drink obj
+String getDescription()
+int cost()
+}
+
+class ShortBlack {
+int cost()
+}
+
+class Decaf {
+int cost()
+}
+
+class Espresso {
+int cost()
+}
+
+class LongBlack {
+int cost()
+}
+
+class Decorator {
+Drink obj
+String getDescription()
+int cost()
+}
+
+class Chocolate {
+String getDescription()
+int cost()
+}
+
+class Milk {
+String getDescription()
+int cost()
+}
+
+class Soy {
+String getDescription()
+int cost()
+}
+
+@enduml

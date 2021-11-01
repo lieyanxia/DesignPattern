@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Handler
+class ConcreteHandlerA
+class ConcreteHandlerB
+class Request
+class Client
+
+class Handler{
+successor:Handler
+processRequest():void
+}
+
+class ConcreteHandlerA{
+processRequest():void
+}
+class ConcreteHandlerB{
+processRequest():void
+}
+
+Handler --o Handler
+ConcreteHandlerA --|> Handler
+ConcreteHandlerB --|> Handler
+Handler ..> Request
+Client ..> Request
+Client ..> Handler
+
+@enduml

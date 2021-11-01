@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+Client -- AbstractProduct
+Client -- Factory
+
+Factory <|-- CreateFactory1
+Factory <|-- CreateFactory2
+
+AbstractProduct <|-- Product2
+AbstractProduct <|-- Product1
+
+Product1 <.. CreateFactory1
+Product2 <.. CreateFactory2
+
+class Factory {
+CreateProduct1(): AbstractProduct
+CreateProduct2(): AbstractProduct
+}
+
+
+@enduml

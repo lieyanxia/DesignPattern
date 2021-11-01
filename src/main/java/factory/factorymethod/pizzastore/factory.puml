@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+OrderPizza <|-- BJOrderPizza
+OrderPizza <|-- LDOrderPizza
+
+BJOrderPizza <.. BJCheessPizza
+BJOrderPizza <.. BJPepperPizza
+LDOrderPizza <.. LDCheessPizza
+LDOrderPizza <.. LDPepperPizza
+
+Pizza <|-- BJCheessPizza
+Pizza <|-- BJPepperPizza
+
+Pizza <|-- LDCheessPizza
+Pizza <|-- LDPepperPizza
+
+
+
+
+
+
+class Pizza {
+prepare():void
+bake():void
+cut():void
+box():void
+}
+
+
+
+@enduml

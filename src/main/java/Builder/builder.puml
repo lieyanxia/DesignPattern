@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+IBuilderHuman <|-- SmartManBuilder
+SmartManBuilder *-- Human
+Director o-- IBuilderHuman
+class Director {
+IBuilderHuman bh;
+Human createHUmanByDirector(IBuilderHuman bh)
+}
+
+class SmartManBuilder {
+    Human human;
+    void buildHead();
+    void buildBody();
+    void buildHand();
+    void buildFoot();
+    Human createHuman();
+
+}
+
+interface IBuilderHuman {
+    void buildHead();
+    void buildBody();
+    void buildHand();
+    void buildFoot();
+    Human createHuman();
+}
+
+class Human {
+String head;
+String body;
+String hand;
+String foot;
+}
+
+
+
+@enduml

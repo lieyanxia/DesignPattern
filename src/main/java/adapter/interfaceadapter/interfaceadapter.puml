@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Interface4
+class AbsAdapter
+class Client
+
+interface Interface4 {
+operation1():void
+operation2():void
+operation3():void
+operation4():void
+}
+
+class AbsAdapter{
+抽象类：默认实现接口内的所有方法
+}
+
+class Client{
+}
+AbsAdapter ..|> Interface4
+Client ..> AbsAdapter
+
+
+
+
+@enduml

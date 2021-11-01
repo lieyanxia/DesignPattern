@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class TeacherDao
+class ProxyFactory
+interface MethodInterceptor
+class Client
+
+class TeacherDao{
+teach():void
+}
+
+
+
+class ProxyFactory{
+targer:Object
+proxyFactory():void
+getProxyInstance():Object
+intecept():void
+}
+
+MethodInterceptor <|.. ProxyFactory
+Client ..> TeacherDao
+Client ..> ProxyFactory
+ProxyFactory o-- TeacherDao
+
+@enduml
