@@ -5,6 +5,7 @@ public class Client {
         //创建一个请求
         PurchaseRequest purchaseRequest = new PurchaseRequest(1, 31000, 1);
 
+
         //创建相关的审批人
         DepartmentApprover departmentApprover = new DepartmentApprover("张主任");
         CollegeApprover collegeApprover = new CollegeApprover("李院长");
