@@ -3,6 +3,7 @@ package adapter.classadapter;
 //被适配器类
 public class Voltage220V {
 
+
     //输出220V的电压
     public int output220V(){
         int src=220;
